@@ -1,12 +1,12 @@
 function doPost(e) {
   //Configuration
-  const gDriveFolderId = '';
-  const gSheetId = '';
+  const gDriveFolderId = '1zTBBVks_lPAICY_dRX_rPAKi1qPeR0qE';
+  const gSheetId = '1qmq1a1szl0kNyUW9WIin7v8GszbmB0kU2F85ERAbfGI';
   const sheet = SpreadsheetApp.openById(gSheetId).getActiveSheet();
   const dataPrependRow = 2;
-  const devEmail = '';
-  const senderEmail = '';
-  const formRecipientEmailList = '';
+  const devEmail = 'weston.norwood@gmail.com';
+  const senderEmail = 'switchbackrepair@gmail.com';
+  const formRecipientEmailList = 'weston.norwood@gmail.com';
   try {
     console.log('Received form data...')
     const formData = JSON.parse(e.postData.contents);
