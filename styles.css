@@ -1,0 +1,221 @@
+input, textarea {
+  border: 1px solid #ccc;   
+  padding: 15px;            
+  border-radius: 4px;      
+  font-size: 16px;          
+  outline: none;            
+  box-sizing: border-box;   
+}
+
+input:focus, textarea:focus {
+  border-color: #66afe9;    /* Optional focus border color */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6); /* Optional focus shadow */
+}
+
+      /* Style the custom button */
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 6px 0px;
+  cursor: pointer;
+  background-color: #FEFEF6;
+  color: #062732;
+  border-radius: 4px;
+  width: 100px;
+  height: 38px;
+  text-align: center;
+vertical-align:middle;
+}
+.upload-btn-wrapper input[type=file] {
+font-size: 5px;
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+}
+
+/* Style the label */
+.upload-btn-wrapper:hover {
+  background-color: #e9e9e9;
+}
+
+/* Style the label */
+.upload-btn-wrapper::before {
+  content: 'Select Photos';
+}
+
+.inputError {
+color: #f69828;
+}
+
+.preview-img-container{
+display: grid;
+gap: 10px;
+padding-bottom: 10px;
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+margin: 10px 0;
+}
+
+.preview-img-tile{
+width: 100px;
+height: 100px;
+border-radius: 4px;
+padding-bottom: 10px;
+display: inline-block;
+border-radius: 4px;
+box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+.preview-img{
+width: 100px;
+height: 100px;
+border-radius: 4px;
+}
+.submission-status-container{
+display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+submission-success {
+display:none;
+}
+submission-failure {
+       display: none;
+}
+    .loaderContainer {
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animateThread {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#thread {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: animateThread 2s linear infinite;
+}
+
+/* Default styles for carousel */
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px;
+  background-color: #062732;
+  color: #fefef7;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.post{
+  max-width: 400px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  background: rgba(236, 149, 200, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 16px 16px 0;
+  margin-bottom: 16px;
+}
+.post img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  user-select: none;
+  pointer-events: none;
+}
+.post p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2rem;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  background: rgba(189, 181, 181, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 30px 0;
+  width: min(1200px, 100%);
+}
+.swiper {
+  width: 80%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+.swiper-scrollbar {
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-drag-bg-color: #dda3b6;
+  --swiper-scrollbar-size: 5px;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 1200px) { 
+  .swiper {
+      width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+  .swiper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 765px) {
+  .swiper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .swiper {
+    width: 80%;
+  }
+}
