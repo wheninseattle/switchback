@@ -58,6 +58,8 @@
       descriptionInput.placeholder = "Tell us about your project";
 
       // Photo upload (multiple files)
+      const photoLabel = document.createElement("label");
+      photoLabel.textContent = "Please include item photos to streamline estimation.";
       const photoInputWrapper = document.createElement("div");
       photoInputWrapper.classList.add("upload-btn-wrapper");
       const photoInputBtn = document.createElement("btn");
@@ -150,6 +152,7 @@
       form.appendChild(emailError);
       form.appendChild(descriptionLabel);
       form.appendChild(descriptionInput);
+      form.appendChild(photoLabel);
       form.appendChild(photoInputWrapper);
       form.appendChild(submitButton);
       form.appendChild(imgPreviewContainer);
